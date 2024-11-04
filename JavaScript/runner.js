@@ -1,8 +1,9 @@
-import { stringCompression } from "./src/string-compression/index.js";
+import { balancedBrackets } from "./src/balanced_brackets/index.js";
 import { maxProfitStocks } from "./src/max-profit-stocks/index.js";
+import { stringCompression } from "./src/string-compression/index.js";
+import { palindrome } from "./src/palindrome/index.js";
 
 import { PROGRAM_CONSTANTS } from "./constants.js";
-import { palindrome } from "./src/palindrome/index.js";
 
 export const runner = (type) => {
   let inputArray;
@@ -40,6 +41,11 @@ export const runner = (type) => {
         "abc|@#~cba",
       ];
       inputArray.forEach((input) => console.log(palindrome(input)));
+      break;
+
+    case PROGRAM_CONSTANTS.BALANCED_BRACKETS:
+      inputArray = ["[]", "[{}]", "<>[]{}", "[{}<>({})]", "[{]", "{()[}}"];
+      inputArray.forEach((input) => console.log(balancedBrackets(input)));
       break;
 
     default:
