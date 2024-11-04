@@ -1,4 +1,4 @@
 import { runner } from "./runner.js";
 import { PROGRAM_CONSTANTS } from "./constants.js";
 
-runner(PROGRAM_CONSTANTS.BALANCED_BRACKETS);
+runner(PROGRAM_CONSTANTS.REMOVE_DUPLICATES);
