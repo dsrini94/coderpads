@@ -2,6 +2,7 @@ import { stringCompression } from "./src/string-compression/index.js";
 import { maxProfitStocks } from "./src/max-profit-stocks/index.js";
 
 import { PROGRAM_CONSTANTS } from "./constants.js";
+import { palindrome } from "./src/palindrome/index.js";
 
 export const runner = (type) => {
   let inputArray;
@@ -26,8 +27,21 @@ export const runner = (type) => {
         [5, 4, 3, 18, 6, 12, 8, 10, 20, 15],
       ];
       inputArray.forEach((input) => console.log(maxProfitStocks(input)));
-
       break;
+
+    case PROGRAM_CONSTANTS.PALINDROME:
+      inputArray = [
+        "dollop",
+        "level",
+        "Ana",
+        "A car, a man, a maraca.",
+        1010,
+        101,
+        "abc|@#~cba",
+      ];
+      inputArray.forEach((input) => console.log(palindrome(input)));
+      break;
+
     default:
       console.log("WRONG TYPE");
   }
