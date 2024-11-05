@@ -1,3 +1,5 @@
+import { addingFractions } from "./src/adding-fractions/index.js";
+import { anagrams } from "./src/anagrams/index.js";
 import { balancedBrackets } from "./src/balanced-brackets/index.js";
 import { maxProfitStocks } from "./src/max-profit-stocks/index.js";
 import { mostCommonWord } from "./src/most-common-word/index.js";
@@ -83,6 +85,27 @@ export const runner = (type) => {
         [13, 18, 10, 19, 3, 2, 1, 1, 14, 7, 16, 16, 4, 13, 20],
       ];
       inputArray.forEach((input) => console.log(removeDuplicates(input)));
+      break;
+
+    case PROGRAM_CONSTANTS.ANAGRAMS:
+      inputArray = [
+        { word1: "salvages", word2: "Las Vegas" },
+        { word1: "none", word2: "neon" },
+        { word1: "year two thousand", word2: "a year to shutdown" },
+        { word1: "the tennis pro", word2: "he in net sport" },
+        { word1: "capture", word2: "door holder" },
+      ];
+      inputArray.forEach((input) => console.log(anagrams(input)));
+      break;
+
+    case PROGRAM_CONSTANTS.ADDING_FRACTIONS:
+      inputArray = [
+        [1, 2, 3, 2],
+        [1, 3, 3, 9],
+        [1, 5, 3, 15],
+        [1, 8, 3, 16],
+      ];
+      inputArray.forEach((input) => console.log(addingFractions(input)));
       break;
 
     default:
